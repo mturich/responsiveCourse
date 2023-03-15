@@ -43,8 +43,6 @@ h1 {
    /* display: flex => flex container */
    display: flex;
    justify-content: space-between;
-
-   /* can't use yet */
    gap: 2rem;
 }
 
@@ -70,7 +68,7 @@ h1 {
 }
 
 .hero__img {
-   width: 40%;
+   width: 36%;
    align-self: center;
    /* object-fit: contain; */
 }
@@ -89,20 +87,34 @@ h1 {
 /* ---------------------------------------------------------- */
 .content {
    padding: 100px 0;
-   flex-basis: 500px;
-   flex-grow: 1;
+}
+
+.wrap {
+   flex-wrap: wrap-reverse;
 }
 
 .content__text {
    font-weight: 100;
    color: #3a3a3a;
+   flex-basis: 300px;
+   flex-grow: 999;
+}
+
+.context__paragraph {
+   flex-basis: 150px;
+   flex-grow: 1;
 }
 
 .aside {
-   flex-basis: 300px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-basis: 200px;
+   flex-grow: 1;
+   align-items: start;
    min-width: 40%;
    text-align: center;
    background-color: #136c72;
+   gap: 1rem;
    padding: 1rem;
    color: white;
 }
@@ -112,7 +124,7 @@ h1 {
 }
 
 .aside p {
-   margin-bottom: 3em;
+   margin-bottom: 1em;
 }
 
 /*---------------------------------------------------------- */
