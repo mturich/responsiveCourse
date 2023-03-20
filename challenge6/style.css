@@ -33,6 +33,24 @@ h1 {
    margin-top: 0;
 }
 
+.btnLink {
+   display: inline-block;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #23424a;
+   font-weight: 900;
+   background-color: #38cfd9;
+   padding: 0.75em 2em;
+   border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+   opacity: 0.75;
+}
+
+/* --------------------------------------- */
+
 .container {
    width: 80%;
    max-width: 1100px;
@@ -51,8 +69,12 @@ h1 {
    width: 100%;
 }
 
-.col + .col {
-   margin-left: 30px;
+.revwrap {
+   flex-wrap: wrap-reverse;
+}
+
+.wrap {
+   flex-wrap: wrap;
 }
 
 /* --------------------------------------- */
@@ -65,12 +87,17 @@ h1 {
 
 .hero__text {
    width: 62%;
+
+   flex-basis: 300px;
+   flex-grow: 999;
 }
 
 .hero__img {
    width: 36%;
    align-self: center;
-   /* object-fit: contain; */
+
+   flex-basis: 300px;
+   flex-grow: 1;
 }
 
 .hero h1 {
@@ -89,13 +116,10 @@ h1 {
    padding: 100px 0;
 }
 
-.wrap {
-   flex-wrap: wrap-reverse;
-}
-
 .content__text {
    font-weight: 100;
    color: #3a3a3a;
+
    flex-basis: 300px;
    flex-grow: 999;
 }
@@ -106,21 +130,23 @@ h1 {
 }
 
 .aside {
+   min-width: 40%;
+   align-items: start;
+   text-align: center;
+   background-color: #136c72;
+   color: white;
+   padding: 1rem;
+
    display: flex;
    flex-wrap: wrap;
    flex-basis: 200px;
    flex-grow: 1;
-   align-items: start;
-   min-width: 40%;
-   text-align: center;
-   background-color: #136c72;
    gap: 1rem;
-   padding: 1rem;
-   color: white;
 }
 .aside h2 {
    font: 'Roboto Black';
    font-size: 36px;
+   margin-block: 0;
 }
 
 .aside p {
@@ -128,19 +154,3 @@ h1 {
 }
 
 /*---------------------------------------------------------- */
-
-.btnLink {
-   display: inline-block;
-   text-decoration: none;
-   text-transform: uppercase;
-   color: #23424a;
-   font-weight: 900;
-   background-color: #38cfd9;
-   padding: 0.75em 2em;
-   border-radius: 100px;
-}
-
-.btn:hover,
-.btn:focus {
-   opacity: 0.75;
-}
