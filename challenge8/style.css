@@ -8,6 +8,8 @@ body {
    margin: 0;
    font-family: Roboto, sans-serif;
    font-size: 1.3rem;
+   line-height: 1.6;
+   color: #000;
 }
 
 img {
@@ -20,42 +22,37 @@ h1 {
 }
 
 .container {
-   max-width: 1128px;
-   width: 80%;
+   width: 90%;
    margin: 0 auto;
 }
 
 .text {
    font-family: Roboto Regular;
    font-size: 21px;
-}
-
-.row {
-   display: flex;
-   gap: 3em;
-}
-.reverse {
-   flex-direction: row-reverse;
+   hyphens: auto;
+   /* line-break: auto; */
 }
 
 /* ------------------------------------- */
 
 .title {
-   min-height: 460px;
+   min-height: 660px;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
+   align-items: center;
+   padding-block: 3rem;
 }
 
 .title__container {
    margin: 0 auto;
-   width: 60%;
+   width: 90%;
    text-align: center;
 }
 
 .title__heading {
    font-family: Playfair Display, serif;
-   font-size: 60px;
+   font-size: 50px;
+   line-height: 1.1;
+   padding: 0 2rem;
    color: #824936;
 }
 
@@ -68,20 +65,7 @@ h1 {
 /* ------------------------------------- */
 
 .paragraph {
-   /* width: 100%; */
    padding: 3rem 0;
-}
-
-.paragraph__text {
-   width: 100%;
-}
-
-.paragraph__imgs {
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-
-   width: 100%;
 }
 
 .paragraph__imgs--reverse {
@@ -91,14 +75,14 @@ h1 {
 .paragraph__title {
    font-family: Playfair Display, serif;
    font-size: 36px;
+   text-align: center;
 }
 
 .paragraph__title--first {
-   text-align: center;
    color: #824936;
 }
 
-/* ----------------------- */
+/* ----------------------------------------------------- */
 
 .dark {
    background-color: #222c2a;
@@ -116,4 +100,43 @@ h1 {
 
 .white {
    color: #000;
+}
+
+/* ----------------------------------------------------- */
+
+@media (min-width: 600px) {
+   .container {
+      max-width: 1128px;
+      width: 80%;
+   }
+
+   .row {
+      display: flex;
+      gap: 3em;
+   }
+   .reverse {
+      flex-direction: row-reverse;
+   }
+
+   /* ----------------------------------------------------- */
+
+   .title__container {
+      width: 60%;
+   }
+
+   .title__heading {
+      font-size: 60px;
+   }
+
+   .paragraph__imgs {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      width: 100%;
+   }
+
+   .paragraph__text {
+      width: 100%;
+   }
 }
