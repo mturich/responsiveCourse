@@ -2,7 +2,7 @@
 *::before,
 *::after {
    box-sizing: border-box;
-   border: 1px solid black;
+   /* border: 1px solid black; */
 }
 
 body {
@@ -24,7 +24,7 @@ img {
 
 .section {
    min-height: 300px;
-   padding: 4rem 0;
+   padding: 3rem 0;
 }
 
 .container {
@@ -36,8 +36,17 @@ img {
 
 /* ---------------------------------------- */
 
-.nav {
+.header {
    background-color: #2e323f;
+   padding: 2rem 0;
+}
+
+.nav {
+   display: none;
+}
+
+.toggle-nav {
+   display: block;
 }
 
 .nav__ul {
@@ -69,6 +78,17 @@ img {
    border-radius: 30px;
 
    font-weight: 800;
+}
+
+.icon__wrapper {
+   position: relative;
+}
+
+.hamburger {
+   position: absolute;
+   left: 0;
+   align-self: center;
+   width: 40px;
 }
 
 /* ---------------------------------------- */
@@ -110,6 +130,8 @@ img {
 /* ---------------------------------------- */
 
 .paragraph__title {
+   margin-top: 0;
+   padding-top: 1rem;
    font-size: 30px;
    font-weight: 800;
 }
@@ -130,12 +152,56 @@ img {
    text-align: center;
    min-height: 100px;
    margin: 2rem 0;
+   padding: 1rem 0;
 }
 
 /* ---------------------------------------- */
 
 footer {
    background-color: #6f737f;
+   padding: 2rem 0;
+}
+
+.footer__wrapper__links {
+   display: flex;
+   gap: 1rem;
+}
+
+.footer__wrapper {
+   margin: 0 auto;
+   flex-grow: 1;
+}
+
+.footer__title {
+   font-weight: 800;
+   font-size: 24px;
+}
+
+.footer__subtitle {
+   font-size: 21px;
+}
+
+.footer__ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+.footer__text {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: 200;
+   max-width: 30ch;
+   margin: 0 auto 1rem;
+}
+
+.footer__link {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 12px;
+   font-weight: 200;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #fff;
 }
 /* ---------------------------------------- */
 
@@ -158,9 +224,24 @@ footer {
    .flex {
       display: flex;
    }
+   .icon__wrapper {
+      align-self: center;
+   }
+
+   .hamburger {
+      display: none;
+   }
+
+   .gap {
+      gap: 1rem;
+   }
 
    .horizontal {
       justify-content: space-between;
+   }
+
+   .header {
+      padding: 0;
    }
 
    .nav__ul {
@@ -169,23 +250,22 @@ footer {
       gap: 1rem;
    }
 
-   .nav__li {
-      /* max-width: 150px; */
+   .footer__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: flex-start;
    }
 
    .nav__link {
       display: inline-flex;
-      flex-grow: 1;~
+      flex-grow: 1;
       padding: 0 0.3rem;
       white-space: nowrap;
    }
 
    .intro__h1 {
       font-size: 90px;
-   }
-
-   .gap {
-      gap: 1rem;
    }
 
    .wrap {
